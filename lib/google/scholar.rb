@@ -3,6 +3,7 @@ require "google/scholar/base"
 require "google/scholar/scraper"
 require "google/scholar/document"
 require "google/scholar/author"
+require "google/scholar/author_search"
 require "google/scholar/author_enumerator"
 require "google/scholar/article_summary"
 require "google/scholar/article_enumerator"
@@ -20,6 +21,7 @@ module Google
     def self.google_url
       "#{self.http_scheme}#{self.google_root}"
     end
+    # @TODO May want to move this to AuthorSearch.
     def self.author_search_url(author)
       "#{self.http_scheme}#{self.google_root}/citations?view_op=search_authors&hl=en&mauthors=#{::CGI::escape("author:\"#{author}\"")}"
     end
