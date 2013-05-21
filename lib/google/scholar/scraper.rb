@@ -31,13 +31,6 @@ module Google
         return unless self.has_more_pages?
         @documents << self.class.load_url(@documents.last.next_page_url)
       end
-      def authors
-        @authors ||= Google::Scholar::AuthorEnumerator.new(self)
-      end
-      def self.search_author(author)
-        url = Google::Scholar.author_search_url(author)
-        self.new(url)
-      end
       def self.load_url(url)
         uri = URI(url)
         raise "Invalid scheme for #{url}" if uri.scheme.nil? || !%w{http https}.any?{|scheme| uri.scheme == scheme}

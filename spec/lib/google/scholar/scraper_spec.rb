@@ -26,12 +26,6 @@ describe Google::Scholar::Scraper do
       r.valid?
     end
   end
-  describe "#search_author" do
-    it "should initialize with the search author string" do
-      Google::Scholar::Scraper.should_receive(:new).with(Google::Scholar.author_search_url("test"))
-      Google::Scholar::Scraper.search_author("test")
-    end
-  end
   describe ".has_more_pages?" do
     it "should forward it to the last document it has" do
       doc = double("authors document")

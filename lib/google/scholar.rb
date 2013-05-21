@@ -1,4 +1,5 @@
 require "google/scholar/version"
+require "google/scholar/base"
 require "google/scholar/scraper"
 require "google/scholar/document"
 require "google/scholar/author"
