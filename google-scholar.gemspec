@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'google/scholar/version'
 require 'rbconfig'
 Gem::Specification.new do |spec|
-  spec.name          = "google-scholar-rb"
+  spec.name          = "google-scholar"
   spec.version       = Google::Scholar::VERSION
   spec.authors       = ["Trey Terrell"]
   spec.email         = ["trey.terrell@oregonstate.edu"]
