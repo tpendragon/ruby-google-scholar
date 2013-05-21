@@ -27,8 +27,8 @@ describe Google::Scholar::AuthorsProfileDocument do
     it "should return the articles for this page" do
       subject.articles.length.should == 20
     end
-    it "should return article objects" do
-      subject.articles.first.should be_kind_of Google::Scholar::Article
+    it "should return article summary objects" do
+      subject.articles.first.should be_kind_of Google::Scholar::ArticleSummary
     end
     it "should have the right titles" do
       subject.articles.first.title.should == "Weblogs and the 'middle space'for learning"
