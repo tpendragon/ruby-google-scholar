@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["trey.terrell@oregonstate.edu"]
   spec.description   = %q{Google Scholar interface. Currently only works for Author searches.}
   spec.summary       = %q{Google Scholar interface. Currently only works for Author searches.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/terrellt/ruby-google-scholar"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

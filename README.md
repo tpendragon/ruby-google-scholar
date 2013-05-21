@@ -1,6 +1,11 @@
 # Google::Scholar
 
-TODO: Write a gem description
+Google Scholar interface. Currently only works for Author searches.
+
+## WARNINGS
+
+This gem restricts its hits to Google Scholar as much as possible, but be forewarned that their page may
+restrict your hits if it starts to hit it too much. There is no built in rate limiter to this gem.
 
 ## Installation
 
@@ -18,7 +23,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run an author search:
+
+```ruby
+results = Google::Scholar::Base.author_search("author name")
+```
+
+Get authors (as an enumerator):
+
+```ruby
+results.authors
+```
+
+Get author's article summaries (as an enumerator):
+
+```ruby
+results.authors.first.articles
+```
+
+## Future Development
+
+- Support for searching articles
+- Support for full articles (what you get when you navigate to an article's full_article_url)
+- Improved documentation
+- Rate limiter?
 
 ## Contributing
 
