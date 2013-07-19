@@ -26,7 +26,7 @@ Or install it yourself as:
 Run an author search:
 
 ```ruby
-results = Google::Scholar::Base.author_search("author name")
+results = Google::Scholar::Base.search_author("author name")
 ```
 
 Get authors (as an enumerator):
